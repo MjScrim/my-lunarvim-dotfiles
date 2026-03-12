@@ -13,22 +13,25 @@ Uma configuração rápida, limpa e focada em produtividade/beleza. Construída 
 ## 📸 Visual
 
 ### 💻 Visão Geral do Editor
-
+<br>
 <div align="center">
-  <img src="./assets/geral.gif" alt="Visão Geral do Editor">
+  <img src="./assets/geral.gif" alt="Visão Geral do Editor" width="800">
 </div>
+<br>
 
 ### 📂 NvimTree & Navegação
-
+<br>
 <div align="center">
-  <img src="./assets/nvimtree.png" alt="Explorador de Arquivos NvimTree" width="700">
+  <img src="./assets/nvimtree.png" alt="Explorador de Arquivos NvimTree" width="800">
 </div>
+<br>
 
 ### ✨ Animações e UI Responsiva
-
+<br>
 <div align="center">
-  <img src="./assets/animacoes.gif" alt="Animações e detalhes da Interface" width="700">
+  <img src="./assets/animacoes.gif" alt="Animações e detalhes da Interface" width="800">
 </div>
+<br>
 
 ## ✨ Principais Características
 
