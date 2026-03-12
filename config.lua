@@ -1,0 +1,8 @@
+require("user.plugins")
+require("user.options")
+require("user.keymaps")
+require("user.lualine")
+require("user.telescope")
+require("user.nvimtree")
+require("user.terminal")
+require("user.dashboard")
