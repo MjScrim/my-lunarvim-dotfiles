@@ -10,19 +10,22 @@
 
 Uma configuração rápida, limpa e focada em produtividade/beleza. Construída sob medida para lidar com **C** até o desenvolvimento robusto de APIs em **Java (Spring)**.
 
-## 📸 Tour Visual
+## 📸 Visual
 
 ### 💻 Visão Geral do Editor
+
 <div align="center">
   <img src="./assets/geral.gif" alt="Visão Geral do Editor">
 </div>
 
 ### 📂 NvimTree & Navegação
+
 <div align="center">
   <img src="./assets/nvimtree.png" alt="Explorador de Arquivos NvimTree" width="700">
 </div>
 
 ### ✨ Animações e UI Responsiva
+
 <div align="center">
   <img src="./assets/animacoes.gif" alt="Animações e detalhes da Interface" width="700">
 </div>
