@@ -14,6 +14,26 @@ lvim.builtin.which_key.mappings["p"] = {
 lvim.builtin.which_key.mappings["r"] = lvim.builtin.which_key.mappings["d"]
 lvim.builtin.which_key.mappings["r"].name = "Debug/Run"
 
+lvim.builtin.which_key.mappings["r"]["q"] = {
+  function()
+    local dap = require("dap")
+    local dapui = require("dapui")
+    
+    dapui.close()
+    dap.terminate()
+    
+    for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+      local name = vim.api.nvim_buf_get_name(buf)
+      if name:match("DAP Terminal") or name:match("dap%-terminal") then
+        vim.api.nvim_buf_delete(buf, { force = true })
+      end
+    end
+
+    dap.repl.close()
+  end,
+  "Exit Debug."
+}
+
 lvim.builtin.which_key.mappings["d"] = nil
 
 lvim.builtin.terminal.open_mapping = "<c-z>"
