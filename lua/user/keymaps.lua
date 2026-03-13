@@ -11,6 +11,11 @@ lvim.builtin.which_key.mappings["p"] = {
   i = { "<Cmd>lua require'jdtls'.organize_imports()<CR>", "Organize Imports" },
 }
 
+lvim.builtin.which_key.mappings["r"] = lvim.builtin.which_key.mappings["d"]
+lvim.builtin.which_key.mappings["r"].name = "Debug/Run"
+
+lvim.builtin.which_key.mappings["d"] = nil
+
 lvim.builtin.terminal.open_mapping = "<c-z>"
 
 lvim.keys.normal_mode["n"] = "<cmd>BufferLineCycleNext<CR>"
