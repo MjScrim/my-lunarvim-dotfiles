@@ -16,6 +16,24 @@ lvim.plugins = {
         filter = "octagon"
       })
     end,
+  }, 
+  {
+    "kdheepak/monochrome.nvim"
+  },
+  {
+    "ellisonleao/gruvbox.nvim"
+  },
+  {
+    "Yazeed1s/minimal.nvim"
+  },
+  { 
+    "EdenEast/nightfox.nvim" 
+  },
+  {    
+    "sainnhe/gruvbox-material",
+  },
+  {
+    "Koalhack/darcubox-nvim"
   },
   {
     'sainnhe/sonokai',
@@ -232,8 +250,8 @@ lvim.plugins = {
         inactive = false,
       },
     }
-  }, 
-  {
+  }
+  --[[{
     "hiphish/rainbow-delimiters.nvim",
     config = function()
       local rainbow_delimiters = require("rainbow-delimiters")
@@ -255,5 +273,5 @@ lvim.plugins = {
         },
       }
     end
-  }
+  }]]--
 }

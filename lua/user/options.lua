@@ -1,6 +1,63 @@
-lvim.transparent_window = true
+#lvim.transparent_window = true
 
-lvim.colorscheme = "sonokai"
+lvim.colorscheme = "default"
+
+lvim.autocommands = {
+  {
+    "ColorScheme",
+    {
+      callback = function()
+        local fg = "#ebdbb2"
+        local yellow = "#fabd2f"
+        local gray_types = "#a89984"
+        local bg = "#1d2021"
+
+        local hl = function(group, color, gui)
+          vim.api.nvim_set_hl(0, group, { 
+            fg = color, 
+            bg = nil, 
+            bold = (gui == "bold"), 
+            italic = (gui == "italic") 
+          })
+        end
+
+        vim.api.nvim_set_hl(0, "Normal", { fg = fg, bg = bg })
+        vim.api.nvim_set_hl(0, "CursorLine", { bg = "#282828" })
+
+        local yellow_groups = {
+          "Statement", "Keyword", "Conditional", "Repeat", "Label", 
+          "Exception", "Structure", "Typedef", "@keyword", 
+          "@keyword.return", "@keyword.function", "@keyword.operator",
+          "@keyword.storage", "@type.qualifier"
+        }
+        for _, group in ipairs(yellow_groups) do hl(group, yellow) end
+
+        local gray_groups = {
+          "Type", "StorageClass", "@type", "@type.builtin", 
+          "@storageclass", "@keyword.modifier", "@keyword.type"
+        }
+        for _, group in ipairs(gray_groups) do hl(group, gray_types) end
+
+        local neutrals = {
+          "Identifier", "Function", "Constant", "Number", "Operator", "Delimiter",
+          "@variable", "@variable.parameter", "@property", "@function", "@function.call",
+          "@operator", "@punctuation.bracket", "@punctuation.delimiter", "@constant",
+          "@number", "@variable.member"
+        }
+        for _, group in ipairs(neutrals) do hl(group, fg) end
+
+        hl("String", "#b8bb26")
+        hl("@string", "#b8bb26")
+        hl("Comment", "#928374", "italic")
+        hl("@comment", "#928374", "italic")
+      end,
+    },
+  },
+}
+
+lvim.lsp.on_attach_callback = function(client, bufnr)
+  client.server_capabilities.semanticTokensProvider = nil
+end
 
 lvim.builtin.illuminate.active = false
 
